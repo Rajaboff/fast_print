@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Print</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="arr-btn buttons">
+            <p>Выберите вариант: </p>
+            <button class="btn-header" onclick="c.selectArr(this, c.m.arrW)">Буквы</button>
+            <button class="btn-header" onclick="c.selectArr(this, c.m.arrSym)">Символы</button>
+            <button class="btn-header" onclick="c.selectArr(this, c.m.arrWord)">Слова</button>
+            <button class="btn-header" onclick="c.selectArr(this, c.m.arr)">Предолжения</button>
+            <button class="btn-header" onclick="c.selectArr(this, c.m.arrWS)">Буквы + символы</button>
+        </div>
+        <div class="time-btn buttons">
+            <p>Выберите время: </p>
+            <button class="btn-time" onclick="c.selectTime(this, 5)">5s</button>
+            <button class="btn-time" onclick="c.selectTime(this, 10)">10s</button>
+            <button class="btn-time" onclick="c.selectTime(this, 20)">20s</button>
+            <button class="btn-time" onclick="c.selectTime(this, 30)">30s</button>
+            <button class="btn-time" onclick="c.selectTime(this, 60)">1m</button>
+            <button class="btn-time" onclick="c.selectTime(this, 300)">5m</button>
+        </div>
+        <div class="check">
+            <p>Ошибки: <span id="mistakes" style="color: tomato;"></span>  |  Правильно: <span id="corrects" style="color: lightgreen;"></span></p>
+            <p>Время: <span id="timer"></span></p>
+        </div>
+    
+    <h1 id="randWords">Нажмите на кнопку начать...</h1>
+
+    <div class="inp">
+        <input type="text" id="inp" disabled>
+    </div>
+
+    <div class="bottom-btns">
+        <button id="btnStart" onclick="c.starting()">Начать</button>
+        <button id="removeBtn" onclick="c.clearLi()" disabled>Очистить</button>
+    </div>
+
+    <ul id="latestPress" >
+    </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
